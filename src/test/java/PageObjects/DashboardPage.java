@@ -6,14 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class DashboardPage extends BasePage{
 
-    public WebElement dashboardContainer;
-
     public DashboardPage(WebDriver driver){
         super(driver);
-    }
-
-    public WebElement getDashboardContainer(){
-        return this.dashboardContainer;
     }
 
     public WebElement setDashboardAccountContainer(){

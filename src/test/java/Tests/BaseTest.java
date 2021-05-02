@@ -36,7 +36,7 @@ public class BaseTest {
             case "Chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                //options.addArguments("--headless");
+                options.addArguments("--headless");
                 driver = new ChromeDriver(options);
                 break;
             case "Firefox":
