@@ -13,8 +13,8 @@ public class RegisterData {
     private String password;
 
     public RegisterData(){
-        Date date = new Date();
         Calendar calendar = new GregorianCalendar().getInstance();
+        Date date = new Date();
         calendar.setTime(date);
 
         String timeStamp = calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DAY_OF_MONTH) + "_" + calendar.get(Calendar.HOUR) + "-" + calendar.get(Calendar.MINUTE) + "-" + calendar.get(Calendar.SECOND);

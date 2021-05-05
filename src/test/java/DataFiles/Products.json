@@ -1,0 +1,9 @@
+{
+  "dataset": [
+    {
+      "name": "MacBook",
+      "price": "500",
+      "currency": "USD"
+    }
+  ]
+}

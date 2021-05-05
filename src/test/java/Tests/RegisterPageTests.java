@@ -1,6 +1,5 @@
 package Tests;
 
-import PageObjects.AccountPage;
 import PageObjects.DashboardPage;
 import PageObjects.RegisterPage;
 import Pojo.RegisterData;
@@ -16,8 +15,8 @@ public class RegisterPageTests extends BaseTest{
         registerPage.waitUntilElementExists(registerPage.getRegisterAccountText());
         registerPage.registerNewUser(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getPhone(), newUser.getPassword());
 
-        AccountPage account = new AccountPage(driver);
-        account.waitUntilElementExists(account.setLoggedAccountContainer());
-        Assert.assertTrue(account.setLoggedAccountContainer().isDisplayed());
+        DashboardPage dashboard = new DashboardPage(driver);
+        dashboard.waitUntilElementExists(dashboard.setDashboardAccountContainer());
+        Assert.assertTrue(dashboard.setDashboardAccountContainer().isDisplayed());
     }
 }
