@@ -18,11 +18,11 @@ public class ResultsPage extends BasePage{
         return driver.findElement(By.xpath("//div[@class='product-thumb'][1]//button"));
     }
 
-    public WebElement setProductAddedToCartAlertFlag(){
-        return driver.findElement(By.xpath("//i[@class=\"fa fa-check-circle\"]"));
-    }
-
     public WebElement setProductAddedToCartAlert(){
         return driver.findElement(By.xpath("//*[contains(text(),\" Success: You have added \")]"));
+    }
+
+    public WebElement setProductLink(String product){
+        return driver.findElement(By.xpath("//a[contains(text(),\"" + product + "\")]"));
     }
 }

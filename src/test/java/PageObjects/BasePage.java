@@ -20,7 +20,7 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void implicitWait(int time){
-        driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+    public void implicitWait(int timeInSeconds){
+        driver.manage().timeouts().implicitlyWait(timeInSeconds, TimeUnit.SECONDS);
     }
 }
