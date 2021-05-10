@@ -19,20 +19,19 @@ public class ProductPageTests extends BaseTest{
         ResultsPage results = new ResultsPage(driver);
         results.setProductLink(_productData.getName()).click();
 
-        ProductPage product = new ProductPage(driver);
-        product.waitUntilElementExists(product.setChangeCurrency());
+        ProductPage productPage = new ProductPage(driver);
+        productPage.waitUntilElementExists(productPage.setChangeCurrency());
 
-
-        product.changeCurrency("Euro");
+        productPage.changeCurrency("Euro");
         results.implicitWait(2);
-        Assert.assertTrue(product.verifyCurrency("Euro"));
+        Assert.assertTrue(productPage.verifyPriceByCurrency(_productData.getPriceEuro(), "Euro"));
 
-        product.changeCurrency("Pound");
+        productPage.changeCurrency("Pound");
         results.implicitWait(2);
-        Assert.assertTrue(product.verifyCurrency("Pound"));
+        Assert.assertTrue(productPage.verifyPriceByCurrency(_productData.getPricePound(), "Pound"));
 
-        product.changeCurrency("Dollar");
+        productPage.changeCurrency("Dollar");
         results.implicitWait(2);
-        Assert.assertTrue(product.verifyCurrency("Dollar"));
+        Assert.assertTrue(productPage.verifyPriceByCurrency(_productData.getPriceDollar(), "Dollar"));
     }
 }

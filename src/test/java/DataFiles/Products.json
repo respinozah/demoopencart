@@ -2,8 +2,9 @@
   "dataset": [
     {
       "name": "MacBook",
-      "price": "500",
-      "currency": "USD"
+      "priceDollar": "602.00",
+      "priceEuro": "518.16",
+      "pricePound": "454.10"
     }
   ]
 }

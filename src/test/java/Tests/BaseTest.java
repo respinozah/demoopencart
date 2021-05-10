@@ -27,7 +27,7 @@ public class BaseTest {
             driver.quit();
         }
         catch (WebDriverException e){
-            System.out.println("Sesion de driver esta cerrada.");
+            System.out.println("Driver session is closed.");
         }
     }
 
@@ -36,7 +36,7 @@ public class BaseTest {
             case "Chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                //options.addArguments("--headless");
+                options.addArguments("--headless");
                 driver = new ChromeDriver(options);
                 break;
             case "Firefox":

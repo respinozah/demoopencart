@@ -3,24 +3,30 @@ package Pojo;
 public class ProductData {
 
     private String name;
-    private String price;
-    private String currency;
+    private String priceDollar;
+    private String priceEuro;
+    private String pricePound;
 
-    public ProductData(String _name, String _price, String _currency){
+    public ProductData(String _name, String _priceDollar, String _priceEuro, String _pricePound){
         name = _name;
-        price = _price;
-        currency = _currency;
+        priceDollar = _priceDollar;
+        priceEuro = _priceEuro;
+        pricePound = _pricePound;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getPrice() {
-        return price;
+    public String getPriceDollar() {
+        return priceDollar;
     }
 
-    public String getCurrency() {
-        return currency;
+    public String getPriceEuro() {
+        return priceEuro;
+    }
+
+    public String getPricePound() {
+        return pricePound;
     }
 }

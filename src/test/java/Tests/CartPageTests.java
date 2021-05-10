@@ -7,8 +7,6 @@ import Pojo.ProductData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.sql.ResultSet;
-
 public class CartPageTests extends BaseTest{
 
     @Test(groups = {"regression", "sanity"}, dataProvider = "getProductsDataFromJson", dataProviderClass = ProductsDataProvider.class)

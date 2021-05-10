@@ -40,6 +40,29 @@ public class ProductPage extends BasePage{
         return result;
     }
 
+    public boolean verifyPriceByCurrency(String price, String currency){
+        boolean result = false;
+
+        switch (currency){
+            case "Dollar":
+                if(setPriceInDollar().getText().equals("$"+price)) {
+                    result = true;
+                }
+                break;
+            case "Euro":
+                if(setPriceInEuro().getText().equals(price+"€")) {
+                    result = true;
+                }
+                break;
+            case "Pound":
+                if(setPriceInPound().getText().equals("£"+price)) {
+                    result = true;
+                }
+                break;
+        }
+        return result;
+    }
+
     public WebElement setChangeCurrency(){
         return driver.findElement(By.xpath("//button[@class=\"btn btn-link dropdown-toggle\"]"));
     }
